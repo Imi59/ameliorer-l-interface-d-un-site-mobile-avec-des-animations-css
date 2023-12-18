@@ -1,0 +1,23 @@
+.like1 {
+	display: flex;
+	align-items: center;
+	i {
+		position: absolute;
+		font-size: 25px;
+		right: 1rem;
+	}
+}
+.heart2 {
+	opacity: 0;
+	transition-property: all;
+	transition-duration: 500ms;
+	opacity: 0;
+	transition-property: all;
+	transition-duration: 500ms;
+	&:hover {
+		color: $color_5;
+		opacity: 1;
+		color: $color_5;
+		opacity: 1;
+	}
+}

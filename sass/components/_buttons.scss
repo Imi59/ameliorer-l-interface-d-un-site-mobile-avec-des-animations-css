@@ -1,0 +1,38 @@
+.mes-bouttons {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-bottom: 4em;
+	width: 100%;
+	gap: 1.5em;
+	button {
+		display: flex;
+		border-radius: 1.3em;
+		padding: 0.4em;
+		width: 100%;
+		align-items: center;
+		gap: 1.3em;
+		border: none;
+		position: relative;
+		cursor: pointer;
+		background-color: $background-color_3;
+	}
+	p {
+		font-family: $font-family_1;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	i {
+		color: $color_3;
+		padding-left: 1.7em;
+	}
+	.number {
+	background-color: $background-color_4;
+	border-radius: 50%;
+	padding: 0.2em 0.5em 0.2em 0.5em;
+	position: absolute;
+	left: -0.9em;
+	color: $color_2;
+	font-weight: bold;
+}
+}

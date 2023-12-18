@@ -1,22 +1,3 @@
-$color_1: #353535;
-$color_2: white;
-$color_3: #7E7E7E;
-$color_4: black;
-$color_5: #9356DC;
-$color_6: green;
-$font-family_1: "Roboto", sans-serif;
-$font-family_2: "Shrikhand", sans-serif;
-$background-color_1: #EAEAEA;
-$background-color_2: #F3F3F3;
-$background-color_3: #F6F6F6;
-$background-color_4: #9356DC;
-$background-color_5: white;
-$background-color_6: #99E2D0;
-$background-color_7: #353535;
-
-/*PAGE D'ACCUEIL*/
-/*MENU 1 LA PALETTE DU GOUT*/
-/*# sourceMappingURL=style.css.map */
 body {
 	margin: 0;
 }
@@ -151,6 +132,7 @@ body {
 	color: $color_2;
 	font-weight: bold;
 }
+}
 .restaurants-section {
 	display: flex;
 	flex-direction: column;
@@ -282,81 +264,6 @@ footer {
 		padding-bottom: 2em;
 	}
 }
-.header-menus {
-	display: flex;
-	align-items: center;
-	padding: 1em;
-	i {
-		color: $color_4;
-		font-size: 20px;
-	}
-}
-.main-container {
-	width: 100%;
-	position: relative;
-	img {
-		width: 100%;
-	}
-}
-.menu {
-	display: flex;
-	flex-direction: column;
-	background-color: $background-color_3;
-	border-radius: 35px 35px 0px 0px;
-	position: absolute;
-	top: 12rem;
-	width: 100%;
-	font-family: $font-family_1;
-}
-.menu-complet {
-	display: flex;
-	flex-direction: column;
-	padding: 1em;
-	h2 {
-		font-size: 16px;
-		font-weight: 300;
-	}
-}
-.menu-title {
-	display: flex;
-	align-items: center;
-	gap: 3em;
-	font-family: $font-family_2;
-	font-weight: bold;
-	position: relative;
-}
-.like {
-	display: flex;
-	align-items: center;
-	i {
-		position: absolute;
-		font-size: 25px;
-		right: 1rem;
-	}
-}
-.menu-details {
-	display: flex;
-	background-color: $background-color_5;
-	border-radius: 1.2em;
-	align-items: last baseline;
-	justify-content: space-between;
-	span {
-		font-size: 14px;
-		font-weight: bold;
-    border: red 1px solid;
-}
-}
-.menu-details-title {
-	padding: 1em;
-	h3 {
-		margin: 0;
-		padding-bottom: 0.3em;
-	}
-	p {
-		margin: 0;
-	}
-}
-
 @media (min-width: 768px) {
 	.mes-bouttons {
 		flex-direction: row;
@@ -382,10 +289,4 @@ footer {
 			margin: 0;
 		}
 	}
-	.padding-li {
-		padding-left: 2.5em;
-	}
-	.menu-title {
-		justify-content: center;
-	}
-}}
+}
