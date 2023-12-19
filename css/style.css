@@ -211,10 +211,6 @@ body {
   flex-direction: column;
   padding: 1em;
 }
-.menu-complet h2 {
-  font-size: 16px;
-  font-weight: 300;
-}
 
 .menu-title {
   display: flex;
@@ -239,13 +235,11 @@ body {
   display: flex;
   background-color: white;
   border-radius: 1.2em;
-  align-items: last baseline;
   justify-content: space-between;
 }
 .menu-details span {
   font-size: 14px;
   font-weight: bold;
-  border: red 1px solid;
 }
 
 .menu-details-title {
@@ -361,6 +355,9 @@ footer > ul {
   color: #9356DC;
   opacity: 1;
 }
+.heart2 .checkbox {
+  border: red 1px solid;
+}
 
 body {
   margin: 0;
@@ -371,6 +368,7 @@ body {
   padding-top: 1em;
   align-items: center;
   flex-direction: column;
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.4);
 }
 
 .logo {
@@ -708,10 +706,6 @@ footer > ul {
   flex-direction: column;
   padding: 1em;
 }
-.menu-complet h2 {
-  font-size: 16px;
-  font-weight: 300;
-}
 
 .menu-title {
   display: flex;
@@ -732,20 +726,46 @@ footer > ul {
   right: 1rem;
 }
 
+.les_entrees {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.les_entrees .les_entrees_title {
+  display: flex;
+}
+.les_entrees .les_entrees_title h2 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
 .menu-details {
   display: flex;
   background-color: white;
   border-radius: 1.2em;
-  align-items: last baseline;
   justify-content: space-between;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
 }
-.menu-details span {
-  font-size: 14px;
-  font-weight: bold;
+.menu-details .check {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu-details .prix {
+  display: flex;
+  padding-bottom: 1em;
+  align-items: last baseline;
+}
+.menu-details .valider {
+  border-radius: 0em 1.2em 1.2em 0em;
+  padding: 1.5em;
+  margin-left: 1em;
+  background-color: #99E2D0;
 }
 
 .menu-details-title {
-  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 55%;
 }
 .menu-details-title h3 {
   margin: 0;
@@ -753,12 +773,10 @@ footer > ul {
 }
 .menu-details-title p {
   margin: 0;
-}
-.menu-details-title label {
-  border: red 1px solid;
-}
-.menu-details-title body {
-  background-color: red;
+  font-weight: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
