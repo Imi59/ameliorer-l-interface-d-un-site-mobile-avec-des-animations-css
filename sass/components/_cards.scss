@@ -29,7 +29,6 @@
 		}
 	}
     button {
-		border: 1px solid #9747FF;
 		border-radius: 2.8em;
 		color: $color_2;
 		background: linear-gradient(#9356DC, #FF79DA);
@@ -37,6 +36,8 @@
 		width: 15em;
 		font-size: 16px;
 		font-weight: bold;
+		border: none;
+		box-shadow: 0px 3px 4px rgba(0, 0, 0,0.4);
 	}
 }
 .button-contain1 {
@@ -136,62 +137,4 @@
 		font-family: $font-family_1;
 	}
 }
-.main-container {
-	width: 100%;
-	position: relative;
-	img {
-		width: 100%;
-	}
-}
-.menu {
-	display: flex;
-	flex-direction: column;
-	background-color: $background-color_3;
-	border-radius: 35px 35px 0px 0px;
-	position: absolute;
-	top: 12rem;
-	width: 100%;
-	font-family: $font-family_1;
-}
-.menu-complet {
-	display: flex;
-	flex-direction: column;
-	padding: 1em;
-}
-.menu-title {
-	display: flex;
-	align-items: center;
-	gap: 3em;
-	font-family: $font-family_2;
-	font-weight: bold;
-	position: relative;
-}
-.like {
-	display: flex;
-	align-items: center;
-	i {
-		position: absolute;
-		font-size: 25px;
-		right: 1rem;
-	}
-}
-.menu-details {
-	display: flex;
-	background-color: $background-color_5;
-	border-radius: 1.2em;
-	justify-content: space-between;
-	span {
-		font-size: 14px;
-		font-weight: bold;
-}
-}
-.menu-details-title {
-	padding: 1em;
-	h3 {
-		margin: 0;
-		padding-bottom: 0.3em;
-	}
-	p {
-		margin: 0;
-	}
-}
+
