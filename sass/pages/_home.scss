@@ -1,6 +1,20 @@
 body {
 	margin: 0;
 }
+.progress{
+	width: 50%;
+	border: #9356DC 1px solid;
+	padding: 0.2em;
+	height: 1em;
+	margin: auto;
+	margin-top: 20px;
+	.progress_bar{
+		background-color: #FF79DA;
+		padding: 0.5em;
+		
+		transform: scale(1);
+		transition: transform 6ms ;
+	}}
 .header-index {
 	display: flex;
 	padding-top: 1em;
