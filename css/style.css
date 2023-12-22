@@ -280,18 +280,10 @@ footer > ul {
   opacity: 0;
   transition-property: all;
   transition-duration: 500ms;
-  opacity: 0;
-  transition-property: all;
-  transition-duration: 500ms;
 }
 .heart2:hover {
   color: #9356DC;
   opacity: 1;
-  color: #9356DC;
-  opacity: 1;
-}
-.heart2 .checkbox {
-  border: red 1px solid;
 }
 
 body {
@@ -649,20 +641,17 @@ footer > ul {
 
 .menu-title {
   display: flex;
-  align-items: center;
-  gap: 3em;
   font-family: "Shrikhand", sans-serif;
   font-weight: bold;
-  position: relative;
-}
-.menu-title .like {
-  display: flex;
   align-items: center;
+  position: relative;
 }
 .menu-title .like i {
   position: absolute;
   font-size: 25px;
-  right: 1rem;
+  top: 0.5em;
+  padding: 0.55em;
+  margin-left: 2.5em;
 }
 
 .menu-details {
@@ -685,9 +674,10 @@ footer > ul {
   display: flex;
   align-items: last baseline;
   padding-bottom: 1em;
-  border: red;
+  border: red 1px solid;
 }
 .menu-details .valider {
+  border: blue 1px slid;
   border-radius: 0em 0.9em 0.9em 0em;
   background-color: #99E2D0;
 }
@@ -747,16 +737,13 @@ footer > ul {
   }
 }
 @media (min-width: 768px) {
-  .padding-li {
+  footer .padding-li {
     padding-left: 2.5em;
-  }
-  .like i {
-    right: 5rem;
   }
   .menu {
     width: 80%;
   }
-  .menu-complet {
+  .menu .menu-complet {
     align-items: center;
   }
   .les_entrees {
@@ -767,6 +754,9 @@ footer > ul {
   }
   .les_desserts {
     width: 70%;
+  }
+  .menu-title .like i {
+    margin-left: 0;
   }
 }
 

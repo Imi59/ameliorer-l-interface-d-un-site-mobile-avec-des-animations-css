@@ -11,16 +11,8 @@
 	opacity: 0;
 	transition-property: all;
 	transition-duration: 500ms;
-	opacity: 0;
-	transition-property: all;
-	transition-duration: 500ms;
 	&:hover {
 		color: $color_5;
 		opacity: 1;
-		color: $color_5;
-		opacity: 1;
-	}
-	.checkbox{
-		border: red 1px solid;
 	}
 }
