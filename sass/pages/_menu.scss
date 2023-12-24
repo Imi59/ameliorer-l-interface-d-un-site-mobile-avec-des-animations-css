@@ -4,7 +4,7 @@
     padding: 1em;
 
     i {
-        color: $color_4;
+        color: $color_black;
         font-size: 20px;
     }
 }
@@ -14,29 +14,34 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    position: relative;
-
+    
+    
     img {
         width: 100%;
-        height: 350px;
+        height: 300px;
+        margin-bottom: -5em;
     }
 }
 
 .menu {
     display: flex;
     flex-direction: column;
-    background-color: $background-color_3;
+    background-color: $background-grey1;
     border-radius: 35px 35px 0px 0px;
-    position: absolute;
-    top: 17rem;
     width: 100%;
     font-family: $font-family_1;
+    
+    
 }
+ footer{
+    
+ }
 
 .menu-complet {
     display: flex;
     flex-direction: column;
     padding: 1em;
+
 }
 
 .menu-title {
@@ -69,7 +74,7 @@
 
 .menu-details {
     display: flex;
-    background-color: $background-color_5;
+    background-color: $background-color_white;
     border-radius: 1.2em;
     justify-content: space-between;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
@@ -113,7 +118,7 @@
             align-items: center;
             justify-content: center;
             border-radius: 0em 0.9em 0.9em 0em;
-            background-color: $background-color_6;
+            background-color: $background-tertiaire;
 
             i {
                 opacity: 0;
@@ -121,7 +126,7 @@
                 font-weight: bold;
                 padding: 0.2em;
                 background-color: white;
-                color: $color_7;
+                color: $color_tertiaire;
             }
         }
     }
@@ -129,7 +134,7 @@
 .title_bar{
 	width: 2.5em;
 	height: 3px;
-	background-color: #99E2D0;
+	background-color: $background-tertiaire;
 }
 
 .les_entrees {
@@ -186,6 +191,7 @@
         }
     }
 }
+
 @keyframes validation {
 	0%{
 		width: 2m;

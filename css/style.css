@@ -334,6 +334,7 @@ body {
 footer {
   background-color: #353535;
   color: white;
+  width: 100%;
 }
 footer a {
   text-decoration: none;
@@ -407,6 +408,226 @@ footer > ul {
     margin: 0;
   }
 }
-/*@import "pages/_menu";*/
+.header-menus {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+.header-menus i {
+  color: black;
+  font-size: 20px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.main-container img {
+  width: 100%;
+  height: 300px;
+  margin-bottom: -5em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F6F6;
+  border-radius: 35px 35px 0px 0px;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.menu-complet {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.menu-title {
+  display: flex;
+  font-family: "Shrikhand", sans-serif;
+  font-weight: bold;
+  align-items: center;
+  position: relative;
+}
+.menu-title .like i {
+  position: absolute;
+  font-size: 25px;
+  top: 0.5em;
+  padding: 0.55em;
+  margin-left: 2.5em;
+}
+
+.menu-details:hover .valider {
+  animation: validation 300ms;
+  animation-fill-mode: forwards;
+}
+
+.menu-details:hover i {
+  animation: visibilite 0ms;
+  animation-fill-mode: forwards;
+}
+
+.menu-details {
+  display: flex;
+  background-color: white;
+  border-radius: 1.2em;
+  justify-content: space-between;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
+}
+.menu-details .menu-details-title {
+  padding: 1em;
+  width: 13em;
+}
+.menu-details .menu-details-title h3 {
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  padding-bottom: 0.3em;
+}
+.menu-details .menu-details-title p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+}
+.menu-details .checked {
+  display: flex;
+}
+.menu-details .checked .prix {
+  display: flex;
+  align-items: flex-end;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 1em;
+  margin-right: 0.8em;
+}
+.menu-details .checked .valider {
+  display: flex;
+  width: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0em 0.9em 0.9em 0em;
+  background-color: #99E2D0;
+}
+.menu-details .checked .valider i {
+  opacity: 0;
+  border-radius: 25px;
+  font-weight: bold;
+  padding: 0.2em;
+  background-color: white;
+  color: #99E2D0;
+}
+
+.title_bar {
+  width: 2.5em;
+  height: 3px;
+  background-color: #99E2D0;
+}
+
+.les_entrees {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-bottom: 1em;
+  -webkit-animation: text-apparition 600ms;
+}
+.les_entrees .les_entrees_title {
+  display: flex;
+  flex-direction: column;
+}
+.les_entrees .les_entrees_title h2 {
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.les_plats {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-bottom: 1em;
+  opacity: 0;
+  -webkit-animation: text-apparition 600ms;
+  -webkit-animation-delay: 1200ms;
+  -webkit-animation-fill-mode: forwards;
+}
+.les_plats .les_plats_title h2 {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.les_desserts {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  opacity: 0;
+  -webkit-animation: text-apparition 600ms;
+  -webkit-animation-delay: 2400ms;
+  -webkit-animation-fill-mode: forwards;
+}
+.les_desserts .les_desserts_title h2 {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+}
+
+@keyframes validation {
+  0% {
+    width: 2m;
+  }
+  100% {
+    width: 3.5em;
+  }
+}
+@keyframes visibilite {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes text-apparition {
+  0% {
+    -webkit-transform: translate(-20px);
+    opacity: 0.4;
+  }
+  /*50%{opacity: 0.5;
+      -webkit-transform: translate(-10px);}*/
+  100% {
+    -webkit-transform: translate(0);
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) {
+  footer .padding-li {
+    padding-left: 2.5em;
+  }
+  .menu {
+    width: 80%;
+  }
+  .menu .menu-complet {
+    align-items: center;
+  }
+  .les_entrees {
+    width: 70%;
+  }
+  .les_plats {
+    width: 70%;
+  }
+  .les_desserts {
+    width: 70%;
+  }
+  .menu-title .like i {
+    margin-left: 0;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
