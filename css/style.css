@@ -159,10 +159,6 @@ body {
   box-shadow: 0px 4px 6px rgb(0, 0, 0);
 }
 
-.button-contain1:hover {
-  border: #9356DC 2px solid;
-}
-
 .fonctionnement-section {
   display: flex;
   justify-content: center;
@@ -207,9 +203,6 @@ body {
 .mes-bouttons i {
   color: #7E7E7E;
   padding-left: 0.9em;
-}
-.mes-bouttons i:hover {
-  color: #9356DC;
 }
 .mes-bouttons .number {
   background-color: #9356DC;
@@ -442,7 +435,10 @@ footer > ul {
 .menu-complet {
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  gap: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 3em;
 }
 
 .menu-title {
@@ -568,6 +564,7 @@ footer > ul {
   flex-direction: column;
   gap: 1em;
   opacity: 0;
+  padding-bottom: 1em;
   -webkit-animation: text-apparition 600ms;
   -webkit-animation-delay: 2400ms;
   -webkit-animation-fill-mode: forwards;
