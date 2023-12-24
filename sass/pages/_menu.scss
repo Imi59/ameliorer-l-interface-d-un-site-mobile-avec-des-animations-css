@@ -137,7 +137,7 @@
     flex-direction: column;
     gap: 1em;
     padding-bottom: 1em;
-    -webkit-animation: text-apparition 2s;
+    -webkit-animation: text-apparition 600ms;
 
     .les_entrees_title {
         display: flex;
@@ -156,8 +156,8 @@
     gap: 1em;
     padding-bottom: 1em;
     opacity: 0;
-    -webkit-animation: text-apparition 2s;
-    -webkit-animation-delay: 2s;
+    -webkit-animation: text-apparition 600ms;
+    -webkit-animation-delay: 1200ms;
     -webkit-animation-fill-mode: forwards;
 
     .les_plats_title {
@@ -174,8 +174,8 @@
     flex-direction: column;
     gap: 1em;
     opacity: 0;
-    -webkit-animation: text-apparition 2s;
-    -webkit-animation-delay: 4S;
+    -webkit-animation: text-apparition 600ms;
+    -webkit-animation-delay: 2400ms;
     -webkit-animation-fill-mode: forwards;
 
     .les_desserts_title {
@@ -186,6 +186,38 @@
         }
     }
 }
+@keyframes validation {
+	0%{
+		width: 2m;
+	}
+	100%{
+		width: 3.5em;
+	}
+}
+@keyframes visibilite {
+0%{ 
+	opacity: 0;
+}	
+100%{
+	opacity: 1;
+}
+	
+}
+
+@-webkit-keyframes text-apparition
+{
+	0%
+	{
+		-webkit-transform: translate(-20px);
+		opacity: 0.4;
+	}
+    /*50%{opacity: 0.5;
+        -webkit-transform: translate(-10px);}*/
+	100%
+	{
+		-webkit-transform: translate(0);
+		opacity: 1;
+}}
 
 @media (min-width: 768px) {
     footer {
