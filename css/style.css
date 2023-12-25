@@ -25,8 +25,6 @@ body {
   display: flex;
   padding-top: 1em;
   align-items: center;
-  flex-direction: column;
-  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.4);
 }
 .header-index .logo {
   padding-bottom: 0.8em;
@@ -42,16 +40,29 @@ body {
 /*LES MENUS*/
 .header-menus {
   display: flex;
+  padding-top: 1em;
   align-items: center;
-  padding: 1em;
 }
-.header-menus i {
-  color: black;
+.header-menus a i {
+  padding: 2em;
+  font-weight: bold;
   font-size: 20px;
 }
+.header-menus .logo {
+  padding-bottom: 0.8em;
+  padding-top: 0.7em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.header-menus .logo img {
+  width: 12em;
+}
 
-/*keyframes pour le loader et la page d'accueil qui reste transparente
-pendant le temps où le loader est en jeu*/
+/*keyframes pour la page d'accueil qui reste transparente
+pendant le temps où le loader est en jeu. Lorsque je mets 
+simplement 0% et 100%, la transparence ne reste pas suffisemment
+longtemps d'où les 20% et 70%*/
 @keyframes loading-wait { /*ici la page d'accueil "atend"*/
   0% {
     opacity: 0;
@@ -83,7 +94,7 @@ pendant le temps où le loader est en jeu*/
   }
 }
 /*cette animation agit sur la case verte qui valide
-le choix d'un plat en lui donnant un effet d'ouerture au survol*/
+le choix d'un plat en lui donnant un effet d'ouverture au survol*/
 @keyframes validation {
   0% {
     width: 2m;
@@ -104,6 +115,28 @@ devient visible afin de correspondre à la maquette*/
     opacity: 1;
   }
 }
+/* ELEMENTS SUR LESQUELS LES ANIMATIONS AGISSENT*/
+.card_menu:hover i {
+  animation: visibilite 0ms;
+  animation-fill-mode: forwards;
+}
+
+.cards1 .card_content {
+  -webkit-animation: text-apparition 500ms;
+}
+
+.cards2 .card_content {
+  -webkit-animation: text-apparition 500ms;
+  -webkit-animation-delay: 500ms;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.cards3 .card_content {
+  -webkit-animation: text-apparition 500ms;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+}
+
 .loader_container {
   opacity: 0;
   position: fixed;
@@ -577,6 +610,44 @@ pas directement*/
   -webkit-animation-fill-mode: forwards;
 }
 
+/*-webkit-transform: translate(-20px);*/
+@-webkit-keyframes text-apparition {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) {
+  footer .padding-li {
+    padding-left: 2.5em;
+  }
+  .menu {
+    width: 80%;
+  }
+  .menu .menu-complet {
+    align-items: center;
+  }
+  .cards1, .cards2, .cards3 {
+    width: 70%;
+  }
+  .menu-title .like i {
+    margin-left: 0;
+  }
+}
 /*-webkit-transform: translate(-20px);*/
 @-webkit-keyframes text-apparition {
   0% {

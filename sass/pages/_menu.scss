@@ -215,3 +215,62 @@ pas directement*/
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+    
+
+ 
+
+
+
+  
+/*-webkit-transform: translate(-20px);*/
+
+@-webkit-keyframes text-apparition
+{
+	0%{opacity: 0;}
+    50%{opacity: 0.2;}
+    70%{opacity: 0.4;}
+    80%{opacity: 0.6;}
+    90%{opacity: 0.7;}
+	100%{opacity: 1;}
+}
+
+
+
+
+
+
+@media (min-width: 768px) {
+    footer {
+        .padding-li {
+            padding-left: 2.5em;
+        }
+    }
+    .menu {
+        width: 80%;
+        .menu-complet {
+            align-items: center;
+        }
+    }
+
+    .cards1, .cards2, .cards3{
+        width: 70%;
+    }
+
+    .menu-title {
+        .like {
+            i {
+                margin-left: 0;
+            }
+        }
+    }
+}

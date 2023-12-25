@@ -1,5 +1,7 @@
-/*keyframes pour le loader et la page d'accueil qui reste transparente
-pendant le temps où le loader est en jeu*/
+/*keyframes pour la page d'accueil qui reste transparente
+pendant le temps où le loader est en jeu. Lorsque je mets 
+simplement 0% et 100%, la transparence ne reste pas suffisemment
+longtemps d'où les 20% et 70%*/
 @keyframes loading-wait{ /*ici la page d'accueil "atend"*/
 	0%{opacity: 0;}
 	20%{opacity: 0;}
@@ -16,7 +18,7 @@ pendant le temps où le loader est en jeu*/
 }
 
 /*cette animation agit sur la case verte qui valide
-le choix d'un plat en lui donnant un effet d'ouerture au survol*/
+le choix d'un plat en lui donnant un effet d'ouverture au survol*/
 @keyframes validation {
 	0%{width: 2m;}
 	100%{width: 3.5em;}
@@ -28,4 +30,32 @@ devient visible afin de correspondre à la maquette*/
 @keyframes visibilite {
 0%{ opacity: 0;}	
 100%{opacity: 1;}	
+}
+
+/* ELEMENTS SUR LESQUELS LES ANIMATIONS AGISSENT*/
+
+.card_menu:hover i {
+    animation: visibilite 0ms;
+    animation-fill-mode: forwards;
+}
+.cards1{
+    .card_content{
+    -webkit-animation: text-apparition 500ms;
+    }
+}
+.cards2{
+    .card_content{
+    -webkit-animation: text-apparition 500ms;
+    -webkit-animation-delay: 500ms;
+    -webkit-animation-fill-mode: forwards;
+
+    }
+}
+.cards3{
+    .card_content{
+        -webkit-animation: text-apparition 500ms;
+        -webkit-animation-delay: 1s;
+        -webkit-animation-fill-mode: forwards;
+
+    }
 }
