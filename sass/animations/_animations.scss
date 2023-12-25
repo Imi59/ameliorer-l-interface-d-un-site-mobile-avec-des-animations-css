@@ -1,0 +1,31 @@
+/*keyframes pour le loader et la page d'accueil qui reste transparente
+pendant le temps où le loader est en jeu*/
+@keyframes loading-wait{ /*ici la page d'accueil "atend"*/
+	0%{opacity: 0;}
+	20%{opacity: 0;}
+	70%{opacity: 0;}
+	100%{opacity: 1;}
+}
+@keyframes loader{ /*ici les dot font les mouvements de déplacement*/
+	100%{transform: translateY(-30px);}
+}
+@keyframes opacity{/* rend les dot visible plus transparents*/
+	0%{opacity: 1;}
+	90%{opacity: 1;}
+	100%{opacity: 0;}
+}
+
+/*cette animation agit sur la case verte qui valide
+le choix d'un plat en lui donnant un effet d'ouerture au survol*/
+@keyframes validation {
+	0%{width: 2m;}
+	100%{width: 3.5em;}
+}
+/*l'icône verte est toujours visible avec le width 0
+de son parent donc je lui applique une animation qui la rend transparent
+et qui au survol (donc en même temps que l'animation VALIDATION
+devient visible afin de correspondre à la maquette*/
+@keyframes visibilite {
+0%{ opacity: 0;}	
+100%{opacity: 1;}	
+}

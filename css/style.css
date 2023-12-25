@@ -1,17 +1,109 @@
+@charset "UTF-8";
 body {
   margin: 0;
 }
 
-body {
-  margin: 0;
+.b1 {
+  border-radius: 2.8em;
+  color: white;
+  background: linear-gradient(#9356DC, #FF79DA);
+  padding: 1em;
+  width: 15em;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.b1:hover {
+  opacity: 0.9;
+  box-shadow: 0px 4px 6px rgb(0, 0, 0);
 }
 
-.main_container1 {
-  animation: loading-wait 4s;
-  position: absolute;
+/* PAGE D'ACCUEIL*/
+.header-index {
+  display: flex;
+  padding-top: 1em;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.4);
+}
+.header-index .logo {
+  padding-bottom: 0.8em;
+  padding-top: 0.7em;
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.header-index .logo img {
+  width: 12em;
 }
 
+/*LES MENUS*/
+.header-menus {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+.header-menus i {
+  color: black;
+  font-size: 20px;
+}
+
+/*keyframes pour le loader et la page d'accueil qui reste transparente
+pendant le temps où le loader est en jeu*/
+@keyframes loading-wait { /*ici la page d'accueil "atend"*/
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loader { /*ici les dot font les mouvements de déplacement*/
+  100% {
+    transform: translateY(-30px);
+  }
+}
+@keyframes opacity { /* rend les dot visible plus transparents*/
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*cette animation agit sur la case verte qui valide
+le choix d'un plat en lui donnant un effet d'ouerture au survol*/
+@keyframes validation {
+  0% {
+    width: 2m;
+  }
+  100% {
+    width: 3.5em;
+  }
+}
+/*l'icône verte est toujours visible avec le width 0
+de son parent donc je lui applique une animation qui la rend transparent
+et qui au survol (donc en même temps que l'animation VALIDATION
+devient visible afin de correspondre à la maquette*/
+@keyframes visibilite {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .loader_container {
   opacity: 0;
   position: fixed;
@@ -20,7 +112,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: opacity 3.5s;
+  animation: opacity 3s;
   background-color: #EAEAEA;
 }
 .loader_container .dot {
@@ -38,53 +130,10 @@ body {
   animation-delay: 0.01s;
 }
 
-@keyframes loading-wait {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  70% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes loader {
-  100% {
-    transform: translateY(-30px);
-  }
-}
-@keyframes opacity {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.header-index {
-  display: flex;
-  padding-top: 1em;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.4);
-}
-
-.logo {
-  padding-bottom: 0.8em;
-  padding-top: 0.7em;
+.main_container1 {
+  animation: loading-wait 4s;
+  position: absolute;
   width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.logo img {
-  width: 12em;
 }
 
 .location {
@@ -142,23 +191,6 @@ body {
   text-decoration: underline #99E2D0 3px;
 }
 
-.b1 {
-  border-radius: 2.8em;
-  color: white;
-  background: linear-gradient(#9356DC, #FF79DA);
-  padding: 1em;
-  width: 15em;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-}
-.b1:hover {
-  opacity: 0.9;
-  box-shadow: 0px 4px 6px rgb(0, 0, 0);
-}
-
 .fonctionnement-section {
   display: flex;
   justify-content: center;
@@ -174,7 +206,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.mes-bouttons {
+/*ici je ne sais pas si je dois mettre toute la partie
+dans components-buttons où donner une classe à mon bouton
+et le detacher du reste !!!!!*/
+.mes-bouttons-fonctionnement {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -182,7 +217,7 @@ body {
   width: 100%;
   gap: 1.5em;
 }
-.mes-bouttons button {
+.mes-bouttons-fonctionnement button {
   display: flex;
   border-radius: 1.3em;
   padding: 0.8em;
@@ -195,16 +230,16 @@ body {
   background-color: #F6F6F6;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 }
-.mes-bouttons p {
+.mes-bouttons-fonctionnement p {
   font-family: "Roboto", sans-serif;
   font-size: 14.5px;
   font-weight: bold;
 }
-.mes-bouttons i {
+.mes-bouttons-fonctionnement i {
   color: #7E7E7E;
   padding-left: 0.9em;
 }
-.mes-bouttons .number {
+.mes-bouttons-fonctionnement .number {
   background-color: #9356DC;
   border-radius: 50%;
   padding: 0.3em 0.5em 0.3em 0.5em;
@@ -235,20 +270,6 @@ body {
   font-weight: bold;
   font-size: 26px;
 }
-.restaurants a {
-  text-decoration: none;
-}
-.restaurants .card {
-  width: 100%;
-  height: 15em;
-  border-radius: 25px;
-  background-color: white;
-}
-.restaurants img {
-  width: 100%;
-  height: 10em;
-  border-radius: 25px 25px 0px 0px;
-}
 
 .restaurant-cards {
   display: flex;
@@ -256,8 +277,36 @@ body {
   gap: 1.5em;
   width: 100%;
 }
-
-.card-content {
+.restaurant-cards a {
+  text-decoration: none;
+}
+.restaurant-cards a .card {
+  width: 100%;
+  height: 15em;
+  border-radius: 25px;
+  background-color: white;
+}
+.restaurant-cards a .card .img-new {
+  position: relative;
+}
+.restaurant-cards a .card .img-new img {
+  width: 100%;
+  height: 10em;
+  border-radius: 25px 25px 0px 0px;
+}
+.restaurant-cards a .card .img-new p {
+  position: absolute;
+  right: 1em;
+  text-decoration: none;
+  color: green;
+  font-size: 14px;
+  border: 1px solid #99E2D0;
+  border-radius: 2px;
+  background-color: #99E2D0;
+  padding: 0.2em;
+  font-family: "Roboto", sans-serif;
+}
+.restaurant-cards a .card .card-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -265,24 +314,36 @@ body {
   position: relative;
   font-family: "Roboto", sans-serif;
 }
-.card-content p {
+.restaurant-cards a .card .card-content .card-txt {
+  display: flex;
+  flex-direction: column;
+}
+.restaurant-cards a .card .card-content .card-txt p {
   margin: 0;
   padding-left: 0.5em;
   font-size: 20px;
 }
-.card-content h3 {
+.restaurant-cards a .card .card-content .card-txt h3 {
   margin: 0;
   padding-left: 0.5em;
   padding-top: 0.5em;
   font-weight: bold;
   font-size: 20px;
 }
-
-.like1 {
+.restaurant-cards a .card .like1 {
   display: flex;
   align-items: center;
 }
-.like1 i {
+.restaurant-cards a .card .like1 i {
+  position: absolute;
+  font-size: 25px;
+  right: 1rem;
+}
+.restaurant-cards a .card .like1 {
+  display: flex;
+  align-items: center;
+}
+.restaurant-cards a .card .like1 i {
   position: absolute;
   font-size: 25px;
   right: 1rem;
@@ -301,27 +362,6 @@ body {
   opacity: 1;
   color: #9356DC;
   opacity: 1;
-}
-
-.card-txt {
-  display: flex;
-  flex-direction: column;
-}
-
-.img-new {
-  position: relative;
-}
-.img-new p {
-  position: absolute;
-  right: 1em;
-  text-decoration: none;
-  color: green;
-  font-size: 14px;
-  border: 1px solid #99E2D0;
-  border-radius: 2px;
-  background-color: #99E2D0;
-  padding: 0.2em;
-  font-family: "Roboto", sans-serif;
 }
 
 footer {
@@ -355,28 +395,8 @@ footer > ul {
   padding-bottom: 2em;
 }
 
-.like1 {
-  display: flex;
-  align-items: center;
-}
-.like1 i {
-  position: absolute;
-  font-size: 25px;
-  right: 1rem;
-}
-
-.heart2 {
-  opacity: 0;
-  transition-property: all;
-  transition-duration: 500ms;
-}
-.heart2:hover {
-  color: #9356DC;
-  opacity: 1;
-}
-
 @media (min-width: 768px) {
-  .mes-bouttons {
+  .mes-bouttons-fonctionnement {
     flex-direction: row;
   }
   .restaurant-cards {
@@ -401,16 +421,6 @@ footer > ul {
     margin: 0;
   }
 }
-.header-menus {
-  display: flex;
-  align-items: center;
-  padding: 1em;
-}
-.header-menus i {
-  color: black;
-  font-size: 20px;
-}
-
 .main-container {
   display: flex;
   flex-direction: column;
@@ -456,28 +466,49 @@ footer > ul {
   margin-left: 2.5em;
 }
 
-.menu-details:hover .valider {
-  animation: validation 300ms;
-  animation-fill-mode: forwards;
-}
-
-.menu-details:hover i {
-  animation: visibilite 0ms;
-  animation-fill-mode: forwards;
-}
-
-.menu-details {
+.cards1, .cards2, .cards3 {
   display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-bottom: 1em;
+}
+
+/*ici je met une opacité à 0 pour que les menus n'apparaissent
+pas directement*/
+.cards2 .card_content, .cards3 .card_content {
+  opacity: 0;
+}
+
+.cards_title {
+  display: flex;
+  flex-direction: column;
+}
+.cards_title h2 {
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0;
+}
+.cards_title .title_bar {
+  width: 2.5em;
+  height: 3px;
+  background-color: #99E2D0;
+}
+
+.card_menu {
   background-color: white;
   border-radius: 1.2em;
-  justify-content: space-between;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
 }
-.menu-details .menu-details-title {
+
+.card_content {
+  display: flex;
+  justify-content: space-between;
+}
+.card_content .card_menu_title {
   padding: 1em;
   width: 13em;
 }
-.menu-details .menu-details-title h3 {
+.card_content .card_menu_title h3 {
   font-size: 16px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -485,17 +516,17 @@ footer > ul {
   margin: 0;
   padding-bottom: 0.3em;
 }
-.menu-details .menu-details-title p {
+.card_content .card_menu_title p {
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 14px;
 }
-.menu-details .checked {
+.card_content .checked {
   display: flex;
 }
-.menu-details .checked .prix {
+.card_content .checked .prix {
   display: flex;
   align-items: flex-end;
   font-size: 16px;
@@ -503,7 +534,7 @@ footer > ul {
   padding-bottom: 1em;
   margin-right: 0.8em;
 }
-.menu-details .checked .valider {
+.card_content .checked .valider {
   display: flex;
   width: 0;
   align-items: center;
@@ -511,7 +542,7 @@ footer > ul {
   border-radius: 0em 0.9em 0.9em 0em;
   background-color: #99E2D0;
 }
-.menu-details .checked .valider i {
+.card_content .checked .valider i {
   opacity: 0;
   border-radius: 25px;
   font-weight: bold;
@@ -520,86 +551,50 @@ footer > ul {
   color: #99E2D0;
 }
 
-.title_bar {
-  width: 2.5em;
-  height: 3px;
-  background-color: #99E2D0;
+.card_menu:hover .valider {
+  animation: validation 300ms;
+  animation-fill-mode: forwards;
 }
 
-.les_entrees {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  padding-bottom: 1em;
-  -webkit-animation: text-apparition 600ms;
-}
-.les_entrees .les_entrees_title {
-  display: flex;
-  flex-direction: column;
-}
-.les_entrees .les_entrees_title h2 {
-  font-size: 15px;
-  font-weight: normal;
-  margin: 0;
+.card_menu:hover i {
+  animation: visibilite 0ms;
+  animation-fill-mode: forwards;
 }
 
-.les_plats {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  padding-bottom: 1em;
-  opacity: 0;
-  -webkit-animation: text-apparition 600ms;
-  -webkit-animation-delay: 1200ms;
+.cards1 .card_content {
+  -webkit-animation: text-apparition 500ms;
+}
+
+.cards2 .card_content {
+  -webkit-animation: text-apparition 500ms;
+  -webkit-animation-delay: 500ms;
   -webkit-animation-fill-mode: forwards;
 }
-.les_plats .les_plats_title h2 {
-  font-size: 16px;
-  font-weight: normal;
-  margin: 0;
-}
 
-.les_desserts {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  opacity: 0;
-  padding-bottom: 1em;
-  -webkit-animation: text-apparition 600ms;
-  -webkit-animation-delay: 2400ms;
+.cards3 .card_content {
+  -webkit-animation: text-apparition 500ms;
+  -webkit-animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;
 }
-.les_desserts .les_desserts_title h2 {
-  font-size: 16px;
-  font-weight: normal;
-  margin: 0;
-}
 
-@keyframes validation {
-  0% {
-    width: 2m;
-  }
-  100% {
-    width: 3.5em;
-  }
-}
-@keyframes visibilite {
+/*-webkit-transform: translate(-20px);*/
+@-webkit-keyframes text-apparition {
   0% {
     opacity: 0;
   }
-  100% {
-    opacity: 1;
+  50% {
+    opacity: 0.2;
   }
-}
-@-webkit-keyframes text-apparition {
-  0% {
-    -webkit-transform: translate(-20px);
+  70% {
     opacity: 0.4;
   }
-  /*50%{opacity: 0.5;
-      -webkit-transform: translate(-10px);}*/
+  80% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.7;
+  }
   100% {
-    -webkit-transform: translate(0);
     opacity: 1;
   }
 }
@@ -613,13 +608,7 @@ footer > ul {
   .menu .menu-complet {
     align-items: center;
   }
-  .les_entrees {
-    width: 70%;
-  }
-  .les_plats {
-    width: 70%;
-  }
-  .les_desserts {
+  .cards1, .cards2, .cards3 {
     width: 70%;
   }
   .menu-title .like i {

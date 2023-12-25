@@ -1,0 +1,16 @@
+.b1 {
+    border-radius: 2.8em;
+    color: $color_white;
+    background: linear-gradient($color_primaire, $color_secondaire);
+    padding: 1em;
+    width: 15em;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0,0.4);
+    cursor: pointer;
+    &:hover{
+        opacity: 0.9;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0,6);
+    }
+}

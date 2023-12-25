@@ -1,20 +1,8 @@
-.header-menus {
-    display: flex;
-    align-items: center;
-    padding: 1em;
-
-    i {
-        color: $color_black;
-        font-size: 20px;
-    }
-}
-
 .main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    
     img {
         width: 100%;
         height: 300px;
@@ -30,8 +18,6 @@
     width: 100%;
     font-family: $font-family_roboto;  
 }
-
-
 .menu-complet {
     display: flex;
     flex-direction: column;
@@ -47,7 +33,6 @@
     font-weight: bold;
     align-items: center;
     position: relative;
-
     .like {
         i {
             position: absolute;
@@ -58,25 +43,42 @@
         }
     }
 }
-
-.menu-details:hover .valider {
-    animation: validation 300ms;
-    animation-fill-mode: forwards;
-}
-
-.menu-details:hover i {
-    animation: visibilite 0ms;
-    animation-fill-mode: forwards;
-}
-
-.menu-details {
+.cards1, .cards2, .cards3, {
     display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-bottom: 1em;
+}
+/*ici je met une opacité à 0 pour que les menus n'apparaissent
+pas directement*/
+.cards2 .card_content, .cards3 .card_content{
+    opacity: 0;
+}
+
+.cards_title {
+        display: flex;
+		flex-direction: column;
+        h2 {
+            font-size: 15px;
+            font-weight: normal;
+			margin: 0;
+        }
+        .title_bar{
+            width: 2.5em;
+            height: 3px;
+            background-color: $background-tertiaire;
+        }
+}
+
+.card_menu {
     background-color: $background-color_white;
     border-radius: 1.2em;
-    justify-content: space-between;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
-
-    .menu-details-title {
+}
+.card_content{
+    display: flex;
+    justify-content: space-between;
+    .card_menu_title {
         padding: 1em;
 		width: 13em;
         h3 {
@@ -87,7 +89,6 @@
             margin: 0;
             padding-bottom: 0.3em;
         }
-
         p {
             margin: 0;
 			overflow: hidden;
@@ -96,10 +97,8 @@
 			font-size: 14px;
         }
     }
-
     .checked {
         display: flex;
-
         .prix {
             display: flex;
             align-items: flex-end;
@@ -108,7 +107,6 @@
             padding-bottom: 1em;
             margin-right: 0.8em;
         }
-
         .valider {
             display: flex;
             width: 0;
@@ -116,7 +114,6 @@
             justify-content: center;
             border-radius: 0em 0.9em 0.9em 0em;
             background-color: $background-tertiaire;
-
             i {
                 opacity: 0;
                 border-radius: 25px;
@@ -128,100 +125,70 @@
         }
     }
 }
-.title_bar{
-	width: 2.5em;
-	height: 3px;
-	background-color: $background-tertiaire;
+.card_menu:hover .valider {
+    animation: validation 300ms;
+    animation-fill-mode: forwards;
 }
-
-.les_entrees {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    padding-bottom: 1em;
-    -webkit-animation: text-apparition 600ms;
-
-    .les_entrees_title {
-        display: flex;
-		flex-direction: column;
-        h2 {
-            font-size: 15px;
-            font-weight: normal;
-			margin: 0;
-        }
+.card_menu:hover i {
+    animation: visibilite 0ms;
+    animation-fill-mode: forwards;
+}
+.cards1{
+    .card_content{
+    -webkit-animation: text-apparition 500ms;
     }
 }
-
-.les_plats {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    padding-bottom: 1em;
-    opacity: 0;
-    -webkit-animation: text-apparition 600ms;
-    -webkit-animation-delay: 1200ms;
+.cards2{
+    .card_content{
+    -webkit-animation: text-apparition 500ms;
+    -webkit-animation-delay: 500ms;
     -webkit-animation-fill-mode: forwards;
 
-    .les_plats_title {
-        h2 {
-            font-size: 16px;
-            font-weight: normal;
-			margin: 0;
-        }
+    }
+}
+.cards3{
+    .card_content{
+        -webkit-animation: text-apparition 500ms;
+        -webkit-animation-delay: 1s;
+        -webkit-animation-fill-mode: forwards;
+
     }
 }
 
-.les_desserts {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    opacity: 0;
-    padding-bottom: 1em;
-    -webkit-animation: text-apparition 600ms;
-    -webkit-animation-delay: 2400ms;
-    -webkit-animation-fill-mode: forwards;
 
-    .les_desserts_title {
-        h2 {
-            font-size: 16px;
-            font-weight: normal;
-			margin: 0;
-        }
-    }
-}
 
-@keyframes validation {
-	0%{
-		width: 2m;
-	}
-	100%{
-		width: 3.5em;
-	}
-}
-@keyframes visibilite {
-0%{ 
-	opacity: 0;
-}	
-100%{
-	opacity: 1;
-}
-	
-}
+
+
+
+
+
+
+
+
+
+    
+
+ 
+
+
+
+  
+/*-webkit-transform: translate(-20px);*/
 
 @-webkit-keyframes text-apparition
 {
-	0%
-	{
-		-webkit-transform: translate(-20px);
-		opacity: 0.4;
-	}
-    /*50%{opacity: 0.5;
-        -webkit-transform: translate(-10px);}*/
-	100%
-	{
-		-webkit-transform: translate(0);
-		opacity: 1;
-}}
+	0%{opacity: 0;}
+    50%{opacity: 0.2;}
+    70%{opacity: 0.4;}
+    80%{opacity: 0.6;}
+    90%{opacity: 0.7;}
+	100%{opacity: 1;}
+}
+
+
+
+
+
 
 @media (min-width: 768px) {
     footer {
@@ -229,24 +196,14 @@
             padding-left: 2.5em;
         }
     }
-
     .menu {
         width: 80%;
-
         .menu-complet {
             align-items: center;
         }
     }
 
-    .les_entrees {
-        width: 70%;
-    }
-
-    .les_plats {
-        width: 70%;
-    }
-
-    .les_desserts {
+    .cards1, .cards2, .cards3{
         width: 70%;
     }
 
