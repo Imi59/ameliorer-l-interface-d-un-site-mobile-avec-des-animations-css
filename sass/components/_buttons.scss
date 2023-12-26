@@ -14,3 +14,37 @@
         box-shadow: 0px 4px 6px rgba(0, 0, 0,6);
     }
 }
+.button_index {
+    display: flex;
+    border-radius: 1.3em;
+    padding: 0.8em;
+    width: 100%;
+    align-items: center;
+    gap: 0.9em;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    background-color: $background-grey1;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+p {
+    font-family: $font-family_roboto;
+    font-size: 14.5px;
+    font-weight: bold;
+}
+i {
+    color: $color_grey4;
+    padding-left: 0.9em;
+}
+.number {
+background-color: $background-primaire;
+border-radius: 50%;
+padding: 0.3em 0.5em 0.3em 0.5em;
+position: absolute;
+left: -0.6em;
+color: $color_white;
+font-weight: bold;
+}
+}
+.button_index:hover i{
+    color: $color_primaire;
+}

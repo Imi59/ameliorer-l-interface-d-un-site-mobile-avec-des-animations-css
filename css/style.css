@@ -20,6 +20,182 @@ body {
   box-shadow: 0px 4px 6px rgb(0, 0, 0);
 }
 
+.button_index {
+  display: flex;
+  border-radius: 1.3em;
+  padding: 0.8em;
+  width: 100%;
+  align-items: center;
+  gap: 0.9em;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  background-color: #F6F6F6;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.button_index p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14.5px;
+  font-weight: bold;
+}
+.button_index i {
+  color: #7E7E7E;
+  padding-left: 0.9em;
+}
+.button_index .number {
+  background-color: #9356DC;
+  border-radius: 50%;
+  padding: 0.3em 0.5em 0.3em 0.5em;
+  position: absolute;
+  left: -0.6em;
+  color: white;
+  font-weight: bold;
+}
+
+.button_index:hover i {
+  color: #9356DC;
+}
+
+.card_cliquable {
+  text-decoration: none;
+}
+.card_cliquable .card {
+  width: 100%;
+  height: 15em;
+  border-radius: 25px;
+  background-color: white;
+}
+.card_cliquable .card .img-new {
+  position: relative;
+}
+.card_cliquable .card .img-new img {
+  width: 100%;
+  height: 10em;
+  border-radius: 25px 25px 0px 0px;
+}
+.card_cliquable .card .img-new p {
+  position: absolute;
+  right: 1em;
+  text-decoration: none;
+  color: green;
+  font-size: 14px;
+  border: 1px solid #99E2D0;
+  border-radius: 2px;
+  background-color: #99E2D0;
+  padding: 0.2em;
+  font-family: "Roboto", sans-serif;
+}
+.card_cliquable .card .card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+.card_cliquable .card .card-content .card-txt {
+  display: flex;
+  flex-direction: column;
+}
+.card_cliquable .card .card-content .card-txt p {
+  margin: 0;
+  padding-left: 0.5em;
+  font-size: 20px;
+}
+.card_cliquable .card .card-content .card-txt h3 {
+  margin: 0;
+  padding-left: 0.5em;
+  padding-top: 0.5em;
+  font-weight: bold;
+  font-size: 20px;
+}
+.card_cliquable .card .like1 {
+  display: flex;
+  align-items: center;
+}
+.card_cliquable .card .like1 i {
+  position: absolute;
+  font-size: 25px;
+  right: 1rem;
+}
+.card_cliquable .card .like1 {
+  display: flex;
+  align-items: center;
+}
+.card_cliquable .card .like1 i {
+  position: absolute;
+  font-size: 25px;
+  right: 1rem;
+}
+
+.heart2 {
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 500ms;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 500ms;
+}
+.heart2:hover {
+  color: #9356DC;
+  opacity: 1;
+  color: #9356DC;
+  opacity: 1;
+}
+
+.card_menu {
+  background-color: white;
+  border-radius: 1.2em;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
+}
+.card_menu .card_content {
+  display: flex;
+  justify-content: space-between;
+}
+.card_menu .card_content .card_menu_title {
+  padding: 1em;
+}
+.card_menu .card_content .card_menu_title h3 {
+  font-size: 15px;
+  margin: 0;
+  padding-bottom: 0.3em;
+}
+.card_menu .card_content .card_menu_title p {
+  margin: 0;
+  width: 13em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+}
+.card_menu .card_content .checked {
+  display: flex;
+}
+.card_menu .card_content .checked .prix {
+  display: flex;
+  align-items: flex-end;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 1em;
+  margin-right: 0.8em;
+}
+.card_menu .card_content .checked .valider {
+  display: flex;
+  width: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0em 0.9em 0.9em 0em;
+  background-color: #99E2D0;
+}
+.card_menu .card_content .checked .valider i {
+  opacity: 0;
+  border-radius: 25px;
+  font-weight: bold;
+  padding: 0.2em;
+  background-color: white;
+  color: #99E2D0;
+}
+
 /* PAGE D'ACCUEIL*/
 .header-index {
   display: flex;
@@ -59,6 +235,57 @@ body {
   width: 12em;
 }
 
+footer {
+  background-color: #353535;
+  color: white;
+  width: 100%;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+footer i {
+  padding-right: 0.7em;
+  font-size: 12px;
+}
+footer h3 {
+  font-family: "Shrikhand", sans-serif;
+  margin-bottom: 0;
+  padding-left: 1em;
+  padding-top: 1em;
+  font-size: 14px;
+}
+footer > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding-left: 1em;
+  padding-bottom: 2em;
+}
+
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 3em;
+  }
+  footer > ul {
+    flex-direction: row;
+    padding-bottom: 0;
+  }
+  footer h3 {
+    padding-top: 0;
+    padding-right: 4em;
+    margin: 0;
+  }
+  footer .padding-li {
+    padding-left: 2.5em;
+  }
+}
 /*keyframes pour la page d'accueil qui reste transparente
 pendant le temps où le loader est en jeu. Lorsque je mets 
 simplement 0% et 100%, la transparence ne reste pas suffisemment
@@ -115,7 +342,32 @@ devient visible afin de correspondre à la maquette*/
     opacity: 1;
   }
 }
+@-webkit-keyframes text-apparition {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* ELEMENTS SUR LESQUELS LES ANIMATIONS AGISSENT*/
+.card_menu:hover .valider {
+  animation: validation 300ms;
+  animation-fill-mode: forwards;
+}
+
 .card_menu:hover i {
   animation: visibilite 0ms;
   animation-fill-mode: forwards;
@@ -239,9 +491,6 @@ devient visible afin de correspondre à la maquette*/
   font-family: "Roboto", sans-serif;
 }
 
-/*ici je ne sais pas si je dois mettre toute la partie
-dans components-buttons où donner une classe à mon bouton
-et le detacher du reste !!!!!*/
 .mes-bouttons-fonctionnement {
   display: flex;
   flex-direction: column;
@@ -249,37 +498,6 @@ et le detacher du reste !!!!!*/
   padding-bottom: 4em;
   width: 100%;
   gap: 1.5em;
-}
-.mes-bouttons-fonctionnement button {
-  display: flex;
-  border-radius: 1.3em;
-  padding: 0.8em;
-  width: 100%;
-  align-items: center;
-  gap: 0.9em;
-  border: none;
-  position: relative;
-  cursor: pointer;
-  background-color: #F6F6F6;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-}
-.mes-bouttons-fonctionnement p {
-  font-family: "Roboto", sans-serif;
-  font-size: 14.5px;
-  font-weight: bold;
-}
-.mes-bouttons-fonctionnement i {
-  color: #7E7E7E;
-  padding-left: 0.9em;
-}
-.mes-bouttons-fonctionnement .number {
-  background-color: #9356DC;
-  border-radius: 50%;
-  padding: 0.3em 0.5em 0.3em 0.5em;
-  position: absolute;
-  left: -0.6em;
-  color: white;
-  font-weight: bold;
 }
 
 .restaurants-section {
@@ -310,123 +528,6 @@ et le detacher du reste !!!!!*/
   gap: 1.5em;
   width: 100%;
 }
-.restaurant-cards a {
-  text-decoration: none;
-}
-.restaurant-cards a .card {
-  width: 100%;
-  height: 15em;
-  border-radius: 25px;
-  background-color: white;
-}
-.restaurant-cards a .card .img-new {
-  position: relative;
-}
-.restaurant-cards a .card .img-new img {
-  width: 100%;
-  height: 10em;
-  border-radius: 25px 25px 0px 0px;
-}
-.restaurant-cards a .card .img-new p {
-  position: absolute;
-  right: 1em;
-  text-decoration: none;
-  color: green;
-  font-size: 14px;
-  border: 1px solid #99E2D0;
-  border-radius: 2px;
-  background-color: #99E2D0;
-  padding: 0.2em;
-  font-family: "Roboto", sans-serif;
-}
-.restaurant-cards a .card .card-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: black;
-  position: relative;
-  font-family: "Roboto", sans-serif;
-}
-.restaurant-cards a .card .card-content .card-txt {
-  display: flex;
-  flex-direction: column;
-}
-.restaurant-cards a .card .card-content .card-txt p {
-  margin: 0;
-  padding-left: 0.5em;
-  font-size: 20px;
-}
-.restaurant-cards a .card .card-content .card-txt h3 {
-  margin: 0;
-  padding-left: 0.5em;
-  padding-top: 0.5em;
-  font-weight: bold;
-  font-size: 20px;
-}
-.restaurant-cards a .card .like1 {
-  display: flex;
-  align-items: center;
-}
-.restaurant-cards a .card .like1 i {
-  position: absolute;
-  font-size: 25px;
-  right: 1rem;
-}
-.restaurant-cards a .card .like1 {
-  display: flex;
-  align-items: center;
-}
-.restaurant-cards a .card .like1 i {
-  position: absolute;
-  font-size: 25px;
-  right: 1rem;
-}
-
-.heart2 {
-  opacity: 0;
-  transition-property: all;
-  transition-duration: 500ms;
-  opacity: 0;
-  transition-property: all;
-  transition-duration: 500ms;
-}
-.heart2:hover {
-  color: #9356DC;
-  opacity: 1;
-  color: #9356DC;
-  opacity: 1;
-}
-
-footer {
-  background-color: #353535;
-  color: white;
-  width: 100%;
-}
-footer a {
-  text-decoration: none;
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-}
-footer i {
-  padding-right: 0.7em;
-  font-size: 12px;
-}
-footer h3 {
-  font-family: "Shrikhand", sans-serif;
-  margin-bottom: 0;
-  padding-left: 1em;
-  padding-top: 1em;
-  font-size: 14px;
-}
-footer > ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-  padding-left: 1em;
-  padding-bottom: 2em;
-}
 
 @media (min-width: 768px) {
   .mes-bouttons-fonctionnement {
@@ -437,21 +538,6 @@ footer > ul {
     grid-template-columns: 45% 45%;
     grid-template-rows: 50% 50%;
     justify-content: space-between;
-  }
-  footer {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 3em;
-  }
-  footer > ul {
-    flex-direction: row;
-    padding-bottom: 0;
-  }
-  footer h3 {
-    padding-top: 0;
-    padding-right: 4em;
-    margin: 0;
   }
 }
 .main-container {
@@ -506,8 +592,8 @@ footer > ul {
   padding-bottom: 1em;
 }
 
-/*ici je met une opacité à 0 pour que les menus n'apparaissent
-pas directement*/
+/*ici je met une opacité à 0 pour le contenu
+des cartes afin qu'il n'apparaisse pas directement*/
 .cards2 .card_content, .cards3 .card_content {
   opacity: 0;
 }
@@ -527,114 +613,7 @@ pas directement*/
   background-color: #99E2D0;
 }
 
-.card_menu {
-  background-color: white;
-  border-radius: 1.2em;
-  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
-}
-
-.card_content {
-  display: flex;
-  justify-content: space-between;
-}
-.card_content .card_menu_title {
-  padding: 1em;
-  width: 13em;
-}
-.card_content .card_menu_title h3 {
-  font-size: 16px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  margin: 0;
-  padding-bottom: 0.3em;
-}
-.card_content .card_menu_title p {
-  margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 14px;
-}
-.card_content .checked {
-  display: flex;
-}
-.card_content .checked .prix {
-  display: flex;
-  align-items: flex-end;
-  font-size: 16px;
-  font-weight: bold;
-  padding-bottom: 1em;
-  margin-right: 0.8em;
-}
-.card_content .checked .valider {
-  display: flex;
-  width: 0;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0em 0.9em 0.9em 0em;
-  background-color: #99E2D0;
-}
-.card_content .checked .valider i {
-  opacity: 0;
-  border-radius: 25px;
-  font-weight: bold;
-  padding: 0.2em;
-  background-color: white;
-  color: #99E2D0;
-}
-
-.card_menu:hover .valider {
-  animation: validation 300ms;
-  animation-fill-mode: forwards;
-}
-
-.card_menu:hover i {
-  animation: visibilite 0ms;
-  animation-fill-mode: forwards;
-}
-
-.cards1 .card_content {
-  -webkit-animation: text-apparition 500ms;
-}
-
-.cards2 .card_content {
-  -webkit-animation: text-apparition 500ms;
-  -webkit-animation-delay: 500ms;
-  -webkit-animation-fill-mode: forwards;
-}
-
-.cards3 .card_content {
-  -webkit-animation: text-apparition 500ms;
-  -webkit-animation-delay: 1s;
-  -webkit-animation-fill-mode: forwards;
-}
-
-/*-webkit-transform: translate(-20px);*/
-@-webkit-keyframes text-apparition {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.2;
-  }
-  70% {
-    opacity: 0.4;
-  }
-  80% {
-    opacity: 0.6;
-  }
-  90% {
-    opacity: 0.7;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @media (min-width: 768px) {
-  footer .padding-li {
-    padding-left: 2.5em;
-  }
   .menu {
     width: 80%;
   }
