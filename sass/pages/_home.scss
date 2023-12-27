@@ -33,6 +33,7 @@
 .location {
 	width: 100%;
 	display: flex;
+	border: red 2px solid;
 	align-items: center;
 	justify-content: center;
 	background-color: $background-grey2;
@@ -42,7 +43,8 @@
 		background-color: $background-grey2;
 		border: none;
 		text-align: center;
-		color: $color_grey;	
+		color: $color_grey;
+	
 	}
 	i {
 		color: $color_grey;
