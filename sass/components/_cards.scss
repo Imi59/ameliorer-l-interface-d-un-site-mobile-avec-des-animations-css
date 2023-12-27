@@ -58,28 +58,16 @@
 					right: 1rem;
 				}
 			}
-			.like1 {
-				display: flex;
-				align-items: center;
-				i {
-					position: absolute;
-					font-size: 25px;
-					right: 1rem;
-				}
-			}
 		}
 	}	
 .heart2 {
 	opacity: 0;
 	transition-property: all;
 	transition-duration: 500ms;
-	opacity: 0;
-	transition-property: all;
-	transition-duration: 500ms;
+	color: transparent;
+	background-clip: text;
+	background-image: linear-gradient($color_primaire, $color_secondaire);
 	&:hover {
-		color: $color_primaire;
-		opacity: 1;
-		color: $color_primaire;
 		opacity: 1;
 	}
 }
@@ -87,23 +75,33 @@
     background-color: $background-color_white;
     border-radius: 1.2em;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
+	
 .card_content{
     display: flex;
     justify-content: space-between;
+	width: 100%;
     .card_menu_title {
-        padding: 1em;
+        padding-left: 1em;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		padding-right: 0.5em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
         h3 {
-			font-size: 15px;
+			font-size: 18px;
             margin: 0;
             padding-bottom: 0.3em;
-        }
-        p {
-            margin: 0;
-			width: 13em;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
-			font-size: 13px;
+        }
+        p {
+            margin: 0;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			font-size: 15px;
         }
     }
     .checked {
@@ -114,7 +112,7 @@
 			font-size: 16px;
             font-weight: bold;
             padding-bottom: 1em;
-            margin-right: 0.8em;
+			padding-right: 1em;
         }
         .valider {
             display: flex;

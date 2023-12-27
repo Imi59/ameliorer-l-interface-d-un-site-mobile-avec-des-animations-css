@@ -71,6 +71,11 @@ des cartes afin qu'il n'apparaisse pas directement*/
         }
 }
 
+.b1_menu{
+    display: flex;
+    justify-content: center;
+}
+
 @media (min-width: 768px) {
     .menu {
         width: 80%;

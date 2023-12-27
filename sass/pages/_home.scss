@@ -1,3 +1,4 @@
+
 .loader_container{
 	opacity: 0;
 	position: fixed;
@@ -41,16 +42,16 @@
 		background-color: $background-grey2;
 		border: none;
 		text-align: center;
+		color: $color_grey;	
 	}
 	i {
 		color: $color_grey;
-		margin-left: 3em;
 	}
 }
 ::-webkit-input-placeholder {
-	width: 70%;
 	color: $color_grey;
 	font-weight: bold;
+	font-size: 18px;
 }
 .main {
 	font-family: $font-family_roboto;
@@ -65,18 +66,12 @@
 		font-weight: bold;
 		font-family: $font-family_roboto;
 		font-size: 26px;
-		cursor: pointer;
-		&:hover{
-			text-decoration: underline $color_tertiaire 3px;
-		}
 	}
 	p {
 		text-align: center;
 		margin-top: 0;
 		color: $color_grey;
 		font-size: 18px;
-		cursor: pointer;
-		&:hover{text-decoration: underline $color_tertiaire 3px;}
 	}
 }
 .fonctionnement-section {
