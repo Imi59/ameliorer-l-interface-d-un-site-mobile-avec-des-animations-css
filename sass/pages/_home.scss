@@ -33,7 +33,6 @@
 .location {
 	width: 100%;
 	display: flex;
-	border: red 2px solid;
 	align-items: center;
 	justify-content: center;
 	background-color: $background-grey2;
@@ -48,12 +47,14 @@
 	}
 	i {
 		color: $color_grey;
+		padding-left: 1.5em;
 	}
 }
 ::-webkit-input-placeholder {
 	color: $color_grey;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 16PX;
+	width: 80%;
 }
 .main {
 	font-family: $font-family_roboto;

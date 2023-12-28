@@ -252,7 +252,7 @@ footer h3 {
   margin-bottom: 0;
   padding-left: 1em;
   padding-top: 1em;
-  font-size: 16px;
+  font-size: 18px;
 }
 footer > ul {
   list-style: none;
@@ -339,7 +339,7 @@ devient visible afin de correspondre à la maquette*/
     opacity: 1;
   }
 }
-@-webkit-keyframes text-apparition {
+@keyframes text-apparition {
   0% {
     opacity: 0;
   }
@@ -359,19 +359,19 @@ devient visible afin de correspondre à la maquette*/
 }
 
 .cards1 .card_content {
-  -webkit-animation: text-apparition 1s;
+  animation: text-apparition 1s;
 }
 
 .cards2 .card_content {
-  -webkit-animation: text-apparition 1s;
-  -webkit-animation-delay: 1s;
-  -webkit-animation-fill-mode: forwards;
+  animation: text-apparition 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
 .cards3 .card_content {
-  -webkit-animation: text-apparition 1s;
-  -webkit-animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards;
+  animation: text-apparition 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
 }
 
 .loader_container {
@@ -409,7 +409,6 @@ devient visible afin de correspondre à la maquette*/
 .location {
   width: 100%;
   display: flex;
-  border: red 2px solid;
   align-items: center;
   justify-content: center;
   background-color: #EAEAEA;
@@ -424,12 +423,14 @@ devient visible afin de correspondre à la maquette*/
 }
 .location i {
   color: #353535;
+  padding-left: 1.5em;
 }
 
 ::-webkit-input-placeholder {
   color: #353535;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16PX;
+  width: 80%;
 }
 
 .main {

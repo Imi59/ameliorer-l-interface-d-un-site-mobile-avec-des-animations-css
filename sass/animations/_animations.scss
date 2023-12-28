@@ -32,7 +32,7 @@ devient visible afin de correspondre à la maquette*/
 100%{opacity: 1;}	
 }
 
-@-webkit-keyframes text-apparition
+@keyframes text-apparition
 {
 	0%{opacity: 0;}
 	100%{opacity: 1;}
@@ -50,21 +50,21 @@ devient visible afin de correspondre à la maquette*/
 }
 .cards1{
     .card_content{
-    -webkit-animation: text-apparition 1s;
+    animation: text-apparition 1s;
     }
 }
 .cards2{
     .card_content{
-    -webkit-animation: text-apparition 1s;
-    -webkit-animation-delay: 1s;
-    -webkit-animation-fill-mode: forwards;
+    animation: text-apparition 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
 
     }
 }
 .cards3{
     .card_content{
-        -webkit-animation: text-apparition 1s;
-        -webkit-animation-delay: 2s;
-        -webkit-animation-fill-mode: forwards;
+        animation: text-apparition 1s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
     }
 }
