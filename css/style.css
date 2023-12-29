@@ -23,7 +23,7 @@ body {
 .button_index {
   display: flex;
   border-radius: 1.3em;
-  padding: 0.8em;
+  padding: 1.5em 1.2em 1.5em 1.2em;
   width: 100%;
   align-items: center;
   gap: 0.9em;
@@ -33,14 +33,15 @@ body {
   background-color: #F6F6F6;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 }
-.button_index p {
+.button_index span {
   font-family: "Roboto", sans-serif;
-  font-size: 14.5px;
+  font-size: 15px;
   font-weight: bold;
 }
 .button_index i {
   color: #7E7E7E;
   padding-left: 0.9em;
+  font-size: 16px;
 }
 .button_index .number {
   background-color: #9356DC;
@@ -198,6 +199,8 @@ body {
   display: flex;
   padding-top: 1em;
   align-items: center;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  position: relative;
 }
 .header-index .logo {
   padding-bottom: 0.8em;
@@ -216,6 +219,8 @@ body {
   align-items: center;
   padding-bottom: 1EM;
   padding-top: 1em;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  position: relative;
 }
 .header-menus a i {
   padding-left: 1EM;
@@ -263,7 +268,7 @@ footer > ul {
   padding-bottom: 2em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 850px) {
   footer {
     display: flex;
     flex-direction: row-reverse;
@@ -508,7 +513,7 @@ devient visible afin de correspondre à la maquette*/
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 850px) {
   .mes-bouttons-fonctionnement {
     flex-direction: row;
   }
@@ -611,28 +616,7 @@ des cartes afin qu'il n'apparaisse pas directement*/
     margin-left: 0;
   }
 }
-/*-webkit-transform: translate(-20px);*/
-@-webkit-keyframes text-apparition {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.2;
-  }
-  70% {
-    opacity: 0.4;
-  }
-  80% {
-    opacity: 0.6;
-  }
-  90% {
-    opacity: 0.7;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@media (min-width: 768px) {
+@media (min-width: 850px) {
   footer .padding-li {
     padding-left: 2.5em;
   }

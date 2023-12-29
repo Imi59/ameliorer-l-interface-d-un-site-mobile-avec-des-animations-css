@@ -17,7 +17,7 @@
 .button_index {
     display: flex;
     border-radius: 1.3em;
-    padding: 0.8em;
+    padding: 1.5em 1.2em 1.5em 1.2em;
     width: 100%;
     align-items: center;
     gap: 0.9em;
@@ -26,14 +26,15 @@
     cursor: pointer;
     background-color: $background-grey1;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-p {
+span {
     font-family: $font-family_roboto;
-    font-size: 14.5px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: bold;  
 }
 i {
     color: $color_grey4;
     padding-left: 0.9em;
+    font-size: 16px;
 }
 .number {
 background-color: $background-primaire;
