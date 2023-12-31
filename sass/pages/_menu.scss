@@ -76,27 +76,6 @@ des cartes afin qu'il n'apparaisse pas directement*/
     justify-content: center;
 }
 
-@media (min-width: 768px) {
-    .menu {
-        width: 80%;
-        .menu-complet {
-            align-items: center;
-        }
-    }
-
-    .cards1, .cards2, .cards3{
-        width: 70%;
-    }
-
-    .menu-title {
-        .like {
-            i {
-                margin-left: 0;
-            }
-        }
-    }
-}
-
 @media (min-width: 850px) {
     footer {
         .padding-li {
